@@ -1,11 +1,14 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
 
 .sidebar {
-  width: 240px;
+  width: 200px;
   background-color: white;
   border-right: 1px solid #e0e0e0;
   padding: 10px;
   padding-top: 90px;
+}
+.small-width{
+    width: 50px;
 }
 
 .sidebar-menu,

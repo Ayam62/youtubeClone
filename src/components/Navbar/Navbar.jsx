@@ -1,11 +1,15 @@
 import React from "react";
 import "./navbar.css";
+import { useContext } from "react";
+import { Context } from "../Context/Context";
 
 const Navbar = () => {
+  const {setHideName}= useContext(Context)
+
   return (
     <div className="navbar">
       <div className="navbar-left">
-        <button className="menu-button">
+        <button className="menu-button" onClick={()=>{setHideName(prev=>!prev)}}>
           <i className="fas fa-bars"></i>
         </button>
         <div className="logo">

@@ -1,61 +1,67 @@
 import React from "react";
 import "./Sidebar.css";
+import { useState,useContext } from "react";
+import { Context } from "../Context/Context";
+
 
 const Sidebar = () => {
+  const {hideName}= useContext(Context)
+
+
   return (
-    <div className="sidebar">
+    <div className={`sidebar  ${hideName && "small-width"}`}>
       <ul className="sidebar-menu">
-        <li className="menu-item active">
-          <i className="fas fa-home"></i>Home
+        <li className="menu-item active" >
+          <i className="fas fa-home"></i> {!hideName &&`Home`}
         </li>
         <li className="menu-item">
-          <i className="fas fa-gamepad"></i>Gaming
+          <i className="fas fa-gamepad"></i>{!hideName &&`Gaming`}
         </li>
         <li className="menu-item">
-          <i className="fas fa-car"></i>Automobiles
+          <i className="fas fa-car"></i>{!hideName &&`Automobile`}
         </li>
         <li className="menu-item">
-          <i className="fas fa-basketball-ball"></i>Sports
+          <i className="fas fa-basketball-ball"></i>{!hideName &&`Sports`}
         </li>
         <li className="menu-item">
-          <i className="fas fa-tv"></i>Entertainment
+          <i className="fas fa-tv"></i>{!hideName &&`Entertainment`}
         </li>
         <li className="menu-item">
-          <i className="fas fa-microchip"></i>Technology
+          <i className="fas fa-microchip"></i>{!hideName &&`Technology`}
         </li>
         <li className="menu-item">
-          <i className="fas fa-music"></i>Music
+          <i className="fas fa-music"></i>{!hideName &&`Music`}
         </li>
         <li className="menu-item">
-          <i className="fas fa-blog"></i>Blogs
+          <i className="fas fa-blog"></i>{!hideName &&`Blogs`}
         </li>
         <li className="menu-item">
-          <i className="fas fa-newspaper"></i>News
+          <i className="fas fa-newspaper"></i>{!hideName &&`News`}
         </li>
       </ul>
       <hr className="divider" />
       <div className="subscriptions">
-        <h3 className="subscriptions-title">SUBSCRIBED</h3>
+        <h3 className="subscriptions-title">{!hideName &&`Subscribed`}</h3>
         <ul className="subscriptions-list">
           <li className="subscription-item">
             <img src="https://via.placeholder.com/30" alt="PewDiePie" />
-            PewDiePie
+            {!hideName &&`PewDiePie`}
           </li>
           <li className="subscription-item">
             <img src="https://via.placeholder.com/30" alt="MrBeast" />
-            MrBeast
+            {!hideName &&`Mrbeast`}
           </li>
           <li className="subscription-item">
             <img src="https://via.placeholder.com/30" alt="Justin Bieber" />
-            Justin Bieber
+            {!hideName &&`Justin Beiber`}
           </li>
           <li className="subscription-item">
             <img src="https://via.placeholder.com/30" alt="5-Minute Crafts" />
-            5-Minute Crafts
+            {!hideName &&`5-minutes Craft`}
           </li>
           <li className="subscription-item">
             <img src="https://via.placeholder.com/30" alt="Nas Daily" />
-            Nas Daily
+            {!hideName &&`Nas Daily`}
           </li>
         </ul>
       </div>
